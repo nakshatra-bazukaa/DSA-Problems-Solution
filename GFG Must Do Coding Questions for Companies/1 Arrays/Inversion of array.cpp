@@ -38,15 +38,15 @@ ll merge_sort(ll a[], ll n){
             
     return merge_sort(p1, n1) + merge_sort(p2, n2) + merge(p1, p2, n1, n2, a);
 }
-long long getInversions(long long *arr, int n){
+ll getInversions(ll arr[], ll n){
     return merge_sort(arr, n);
 }
 
 int main(){
-    int n;
+    ll n;
     cin>>n;
-    int a[n];
-    for(int i = 0; i<n; i++)
+    ll a[n];
+    for(ll i = 0; i<n; i++)
         cin>>a[i];
     cout<<getInversions(a, n);
     return 0;
